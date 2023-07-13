@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/punkestu/hello-grpc/user";
+
+service UserService {
+  rpc GetByEmail(User) returns (User);
+}
+
+message User {
+  string name = 1;
+  string email = 2;
+  int32 age = 3;
+}
