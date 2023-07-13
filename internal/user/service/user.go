@@ -18,7 +18,7 @@ type DataUserService struct {
 }
 
 // GetByEmail follow the protobuf file
-func (dus *DataUserService) GetByEmail(ctx context.Context, user *userProto.User) (*userProto.User, error) {
+func (dus *DataUserService) GetByEmail(_ context.Context, user *userProto.User) (*userProto.User, error) {
 	for _, User := range dus.users {
 		if User.Email == user.Email {
 			return User, nil
